@@ -91,7 +91,7 @@ async def q10(update: Update, context: ContextTypes.DEFAULT_TYPE): await handle_
 
 def main():
     # ⚠️ ជំនួស TOKEN របស់អ្នកដែលបានមកពី @BotFather
-    TOKEN = "YOUR_BOT_TOKEN_HERE"
+    TOKEN = "8832353057:AAGvizKZsnYGDV3x3fXz2I5Mt21W-9qQPos"
 
     app = ApplicationBuilder().token(TOKEN).build()
 
