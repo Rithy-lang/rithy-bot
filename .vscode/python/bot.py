@@ -208,8 +208,11 @@ async def q10(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main():
     TOKEN = os.getenv("TOKEN")
     
+    if not TOKEN:
+        print("Error: TOKEN environment variable is missing!")
+        return
+
     app = ApplicationBuilder().token(TOKEN).build()
-    # ... កូដដែលនៅសល់របស់អ្នក ...
 
     # បន្ថែម /start command
     app.add_handler(CommandHandler("start", start))
@@ -222,3 +225,6 @@ def main():
 
     print("Bot ដំណើរការហើយ...")
     app.run_polling()
+
+if __name__ == "__main__":
+    main()
